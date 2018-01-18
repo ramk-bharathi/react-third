@@ -1,5 +1,6 @@
 import React from 'react';
 import {GetUser} from "./GetUser";
+import {Clock} from "../clock/Clock";
 
 export class User extends React.Component {
     state = {
@@ -48,6 +49,7 @@ export class User extends React.Component {
     render() {
         return (
             <div className="container">
+                <Clock/>
                 <form>
                     <input type="text" className="form-control" onChange={(event) => this.onUserStateChange(event)}/>
                     <button className="btn btn-success btn-sm" onClick={(event) => this.onFormSubmit(event)}>Submit</button>
